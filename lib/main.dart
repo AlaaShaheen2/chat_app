@@ -1,4 +1,5 @@
 import 'package:chat_app/pages/login_page.dart';
+import 'package:chat_app/pages/register_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -11,6 +12,10 @@ class ScholarChat extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      routes: {
+        'LoginPage': (context) => LoginPage(),
+        RegisterPage().id: (context) => RegisterPage(),
+      },
       debugShowCheckedModeBanner: false,
       home: LoginPage(),
     );
